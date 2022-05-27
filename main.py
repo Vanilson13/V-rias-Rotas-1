@@ -11,7 +11,7 @@ def unifra():
   
 @app.route('/dashboard/<name>')
 def dashboard (name):
- return f'Nome: {name}'
+ return f'Olá, {name}'
 @app.route('/prod/<name>/<int:qtd>')
 def prod(name, qtd):
  return f'{name} - {qtd}'
