@@ -9,9 +9,12 @@ def index():
 def unifra():
     return '<h2>Universidade de Franca</h2>:'
   
-@app.route('/dashboard/Eduardo')
-def dashboard():
-    return '<h3>Olá Eduardo</h3>:'
+@app.route('/dashboard/<name>')
+def dashboard (name):
+ return f'Nome: {name}'
+@app.route('/prod/<name>/<int:qtd>')
+def prod(name, qtd):
+ return f'{name} - {qtd}'
   
 if __name__ =='__main__':
   app.run(host='0.0.0.0', port=8080)
